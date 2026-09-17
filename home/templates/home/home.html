@@ -1,0 +1,151 @@
+{%  load static  %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PetMatch — encontre seu par</title>
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+  <div class="wrap header-row">
+    <div class="logo"><span class="logo-mark">✳</span>PetMatch</div>
+    <div class="header-actions">
+      <nav>
+        <ul>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#pets">Adotar</a></li>
+          <li><a href="#ongs">Para ONGs</a></li>
+        </ul>
+      </nav>
+      <a href="{% url "login" %}" class="nav-cta">Entrar</a>
+    <a href="{% url "register" %}" class="nav-cta">Cadastro</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Cada pet é único. Descubra aquele que tem tudo a ver com você</h1>
+      <p>PetMatch combina o seu estilo de vida com o temperamento de cada animal disponível para adoção, com a ajuda de ONGs parceiras e da PetIA, nossa assistente de conversa.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary">Encontrar meu match</a>
+        <a href="#ongs" class="btn btn-ghost">Sou uma ONG</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>1.200+</strong><span>adoções concluídas</span></div>
+        <div><strong>84</strong><span>ONGs parceiras</span></div>
+        <div><strong>96%</strong><span>de adaptação sem devolução</span></div>
+      </div>
+    </div>
+
+    <div class="tile-grid">
+      <div class="tile">
+        <div class="tile-photo">🐾</div>
+        <div class="tile-name">Nozes</div>
+        <div class="tile-tag">Vira-lata · 2 anos</div>
+      </div>
+      <div class="tile">
+        <div class="tile-photo">🐱</div>
+        <div class="tile-name">Amora</div>
+        <div class="tile-tag">Gata · 1 ano</div>
+      </div>
+      <div class="tile">
+        <div class="tile-photo">🐕</div>
+        <div class="tile-name">Café</div>
+        <div class="tile-tag">SRD · 4 anos</div>
+      </div>
+      <div class="tile">
+        <div class="tile-photo">🐇</div>
+        <div class="tile-name">Canela</div>
+        <div class="tile-tag">Coelho · 8 meses</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="como-funciona">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Do cadastro à adoção, em três passos</h2>
+      <p>Sem formulários intermináveis. O match leva em conta rotina, espaço em casa e experiência prévia com pets.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3>Conte sua rotina</h3>
+        <p>A PetIA faz algumas perguntas sobre seu dia a dia, moradia e disponibilidade de tempo.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3>Veja seus matches</h3>
+        <p>Cruzamos seu perfil com os animais disponíveis nas ONGs parceiras da sua região.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3>Converse e visite</h3>
+        <p>Fale direto com a ONG responsável e agende uma visita antes de finalizar a adoção.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section pets-section" id="pets">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Alguns pets esperando por um lar</h2>
+      <p>Atualizados diariamente pelas ONGs parceiras.</p>
+    </div>
+    <div class="pet-grid">
+      <div class="pet-card">
+        <div class="pet-photo">🐕</div>
+        <h3>Bento</h3>
+        <div class="pet-meta">SRD · macho · 3 anos</div>
+      </div>
+      <div class="pet-card">
+        <div class="pet-photo">🐈</div>
+        <h3>Girafales</h3>
+        <div class="pet-meta">Gato · fêmea · 6 meses</div>
+      </div>
+      <div class="pet-card">
+        <div class="pet-photo">🐾</div>
+        <h3>Toddy</h3>
+        <div class="pet-meta">Vira-lata · macho · 1 ano</div>
+      </div>
+      <div class="pet-card">
+        <div class="pet-photo">🐕‍🦺</div>
+        <h3>Mel</h3>
+        <div class="pet-meta">SRD · fêmea · 5 anos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ong-band" id="ongs">
+  <div class="wrap ong-inner">
+    <h2>Sua ONG pode gerenciar animais, adoções e conversas em um só lugar</h2>
+    <p>Cadastro de animais, fila de interessados e histórico de adoções — sem planilha.</p>
+    <a href="#" class="btn btn-light">Cadastrar minha ONG</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© 2026 PetMatch</span>
+    <nav><ul>
+      <li><a href="#">Termos</a></li>
+      <li><a href="#">Privacidade</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul></nav>
+  </div>
+</footer>
+
+
+</body>
+</html>
